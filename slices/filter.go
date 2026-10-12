@@ -16,4 +16,5 @@ func Filter[T cmp.Ordered](nums []T, callback func(T) bool) []T {
 	}
 
 	log(fmt.Sprintf("%s: the result is: %v", pkgName, result))
+	return result
 }

@@ -6,10 +6,11 @@ import "fmt"
 func Includes[T comparable](list []T, value T) bool {
 	for _, item := range list {
 		if item == value {
-			log(fmt.SPrintf("%s: Found %v into the list", pkgName))
+			log(fmt.Sprintf("%s: Found %v into the list", pkgName))
 			return true
 		}
 	}
 
-	log(fmt.Sprintf())
+	log(fmt.Sprintf("%s: not found %v into the list", pkgName))
+	return false
 }

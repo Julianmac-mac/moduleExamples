@@ -1,0 +1,12 @@
+go list -m all : lista todos los modulos y dependencias que tiene nuestro proyecto junto con las versiones
+
+go mod graph : indica el nombre del módulo y las dependencias que tiene
+
+go list -m -versions <nombreDelPaquete> : lista toda las versiones disponibles de un paquete
+
+go mod tidy : sincroniza el go.mod con los imports reales de tu código, elimina las que estan en go.mod pero ya no usas
+y actualiza go.sum
+
+go get <paquete>@latest    : pide explícitamente la última versión
+go get <paquete>@v1.5.2    : fija una versión específica (sirve para bajar de versión)
+go get -u <paquete>        : actualiza el módulo y también sus dependencias
